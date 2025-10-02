@@ -3,7 +3,7 @@ const app = express();
 
 const dotenv = require('dotenv');
 dotenv.config();
-const {connection} = require('../config.db');
+const {connection} = require('./config.db');
 
 app.route("/login").post((req, res) => {
     const {username, password} = req.body;
@@ -33,3 +33,5 @@ app.route("/login").post((req, res) => {
         });
     });
     });
+
+    module .exports = app;
